@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Shorten your link</h1>
+<p>Paste your link</p>
+<form action="shorten" method="post">
+    {% csrf_token %}
+    Paste long link: <input type="text" name="link"><br>
+    <button type="submit">Shorten your link</button>
+    {% csrf_token %}
+</form>
+<br>{{text}}
+</body>
+</html>
