@@ -1,14 +1,32 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Shorten your link</h1>
-<p>Paste your link</p>
-<form action="shorten" method="post">
-    {% csrf_token %}
-    Paste long link: <input type="text" name="link"><br>
-    <button type="submit">Shorten your link</button>
-    {% csrf_token %}
-</form>
-<br>{{text}}
-</body>
+  {% load static %}
+  <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Link Shortener</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <!-- front awesome -->
+    <script src="https://kit.fontawesome.com/55207f86e4.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <div class="Main_Body">
+
+      <h1>Shorten your link</h1>
+
+      <form action="shorten" method="post">
+        {% csrf_token %}<br>
+        <p style="font-weight:bold;">Paste long link:</p>
+        <input type="text" name="link"><br>
+        <br>
+        <button type="submit">Shorten your link</button><br><br>
+        {% csrf_token %}
+      </form>
+      <br>
+      "{{text}}
+
+      "
+    </div>
+
+  </body>
 </html>
