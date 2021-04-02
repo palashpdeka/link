@@ -25,7 +25,7 @@ SECRET_KEY = 'xv6wu&6+c)u!ly7*e4#9kl+fng6@kk-&+5(#(4!7ui-oh1-x(f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1',]
+ALLOWED_HOSTS = ['localhost','127.0.0.1','shorlink.herokuapp.com']
 
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static'),
